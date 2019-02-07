@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<contests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="contest.xsd">
+    <contest>
+        <name>Test</name>
+    </contest>
+
+</contests>

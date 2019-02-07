@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="contests">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="contest"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contest">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="name" type="contestNameType"/>
+                <xs:element name="description" type="xs:string"/>
+                <xs:element name="company" type="companyType"/>
+                <xs:element name="startDate" type="xs:date"/>
+                <xs:element name="endDate" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="contestNameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="companyType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
