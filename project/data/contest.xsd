@@ -16,21 +16,41 @@
                 <xs:element name="company" type="companyType"/>
                 <xs:element name="startDate" type="xs:date"/>
                 <xs:element name="endDate" type="xs:date"/>
+                <xs:element ref="votes" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="votes">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="vote"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vote">
+        <xs:complexType> <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute name="wg" type="xs:string" />
+            </xs:extension> </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- custom DataTypes -->
+
     <xs:simpleType name="contestNameType">
         <xs:restriction base="xs:string">
-            <xs:minLength value="3" />
+            <xs:minLength value="3"/>
         </xs:restriction>
     </xs:simpleType>
 
 
     <xs:simpleType name="companyType">
         <xs:restriction base="xs:string">
-            <xs:minLength value="3" />
+            <xs:minLength value="3"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
 </xs:schema>

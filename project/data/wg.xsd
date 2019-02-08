@@ -1,3 +1,83 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="wgs">
+
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="wg"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="wg">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="personen" type="xs:positiveInteger"/>
+                <xs:element name="canton" type="cantonType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- custom DataTypes -->
+
+
+    <xs:simpleType name="cantonType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Aargau" />
+            <xs:enumeration value="AG" />
+            <xs:enumeration value="Appenzell Ausserrhoden" />
+            <xs:enumeration value="AR" />
+            <xs:enumeration value="Appenzell Innerrhoden" />
+            <xs:enumeration value="AI" />
+            <xs:enumeration value="Basel-Landschaft" />
+            <xs:enumeration value="BL" />
+            <xs:enumeration value="Basel-Stadt" />
+            <xs:enumeration value="BS" />
+            <xs:enumeration value="Bern" />
+            <xs:enumeration value="BE" />
+            <xs:enumeration value="Freiburg" />
+            <xs:enumeration value="FR" />
+            <xs:enumeration value="Genf" />
+            <xs:enumeration value="GE" />
+            <xs:enumeration value="Glarus" />
+            <xs:enumeration value="GL" />
+            <xs:enumeration value="Graubünden" />
+            <xs:enumeration value="GR" />
+            <xs:enumeration value="Jura" />
+            <xs:enumeration value="JU" />
+            <xs:enumeration value="Luzern" />
+            <xs:enumeration value="LU" />
+            <xs:enumeration value="Neuenburg" />
+            <xs:enumeration value="NE" />
+            <xs:enumeration value="Nidwalden" />
+            <xs:enumeration value="NW" />
+            <xs:enumeration value="Obwalden" />
+            <xs:enumeration value="OW" />
+            <xs:enumeration value="St. Gallen" />
+            <xs:enumeration value="SG" />
+            <xs:enumeration value="Schaffhausen" />
+            <xs:enumeration value="SH" />
+            <xs:enumeration value="Schwyz" />
+            <xs:enumeration value="SZ" />
+            <xs:enumeration value="Solothurn" />
+            <xs:enumeration value="SO" />
+            <xs:enumeration value="Tessin" />
+            <xs:enumeration value="TI" />
+            <xs:enumeration value="Thurgau" />
+            <xs:enumeration value="TG" />
+            <xs:enumeration value="Uri" />
+            <xs:enumeration value="UR" />
+            <xs:enumeration value="Waadt" />
+            <xs:enumeration value="VD" />
+            <xs:enumeration value="Wallis" />
+            <xs:enumeration value="VS" />
+            <xs:enumeration value="Zürich" />
+            <xs:enumeration value="ZH" />
+            <xs:enumeration value="Zug" />
+            <xs:enumeration value="ZG" />
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

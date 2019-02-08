@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<wgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="wg.xsd">
+
+    <wg>
+        <name>Test</name>
+        <personen>3</personen>
+        <canton>Zug</canton>
+    </wg>
+
+</wgs>
