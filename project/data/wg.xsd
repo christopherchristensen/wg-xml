@@ -17,7 +17,12 @@
                 <xs:element name="personen" type="xs:positiveInteger"/>
                 <xs:element name="canton" type="cantonType"/>
             </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" />
         </xs:complexType>
+        <xs:key name="wgId">
+            <xs:selector xpath="wg"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
     </xs:element>
 
     <!-- custom DataTypes -->

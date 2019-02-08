@@ -16,9 +16,14 @@
                 <xs:element name="company" type="companyType"/>
                 <xs:element name="startDate" type="xs:date"/>
                 <xs:element name="endDate" type="xs:date"/>
-                <xs:element ref="votes" />
+                <xs:element ref="votes"/>
             </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger"/>
         </xs:complexType>
+        <xs:key name="contestId">
+            <xs:selector xpath="contest"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
     </xs:element>
 
     <xs:element name="votes">
@@ -30,11 +35,17 @@
     </xs:element>
 
     <xs:element name="vote">
-        <xs:complexType> <xs:simpleContent>
-            <xs:extension base="xs:positiveInteger">
-                <xs:attribute name="wg" type="xs:string" />
-            </xs:extension> </xs:simpleContent>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:positiveInteger">
+                    <xs:attribute name="wg" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
+        <xs:keyref name="wgIdRef" refer="wgId">
+            <xs:selector xpath="*/vote"/>
+            <xs:field xpath="@wg"/>
+        </xs:keyref>
     </xs:element>
 
 
