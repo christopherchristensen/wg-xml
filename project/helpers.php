@@ -29,3 +29,19 @@ function dbTransaction($dbFile, $callback) {
     libxml_clear_errors();
     return $errors;
 }
+
+function isValidWgId($xml, $wgId) {
+    $ids = array_map(function ($wg) {
+        return intval($wg->attributes()['id']);
+    }, $xml->xpath('//wg'));
+
+    return in_array($wgId, $ids);
+}
+
+function isValidContestId($xml, $contestId) {
+    $ids = array_map(function ($contest) {
+        return intval($contest->attributes()['id']);
+    }, $xml->xpath('//contest'));
+
+    return in_array($contestId, $ids);
+}

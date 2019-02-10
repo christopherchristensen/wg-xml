@@ -8,15 +8,7 @@ $data = [
 ];
 
 $errors = dbTransaction('../data/db.xml', function ($xml) use ($data) {
-    $wgIds = array_map(function ($wg) {
-        return intval($wg->attributes()['id']);
-    }, $xml->xpath('//wg'));
-
-    $contestIds = array_map(function ($wg) {
-        return intval($wg->attributes()['id']);
-    }, $xml->xpath('//contest'));
-
-    $valid = in_array($data['wgId'], $wgIds) && in_array($data['wgId'], $wgIds);
+    $valid = isValidWgId($xml, $data['wgId']) && isValidContestId($xml, $data['contestId']);
     if (!$valid) {
         header('HTTP/1.0 404 Not Found');
         echo "Invalid URL";
