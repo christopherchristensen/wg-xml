@@ -5,11 +5,21 @@
 
     <contests>
         <contest id="1">
-            <name>Test</name>
-            <description>Test</description>
-            <company>Test</company>
+            <name>Contest 1</name>
+            <description>Description for Contest 1</description>
+            <company>Company 1</company>
             <startDate>2019-02-01</startDate>
             <endDate>2019-03-01</endDate>
+            <votes>
+                <vote wg="2">3</vote>
+            </votes>
+        </contest>
+        <contest id="2">
+            <name>Contest 2</name>
+            <description>Description for Contest 2</description>
+            <company>Company 2</company>
+            <startDate>2019-01-01</startDate>
+            <endDate>2019-02-01</endDate>
             <votes>
                 <vote wg="2">3</vote>
             </votes>
