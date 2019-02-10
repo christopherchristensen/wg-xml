@@ -13,7 +13,7 @@
 
     <xsl:template match="wg">
         <li>
-            <xsl:value-of select="concat(name, '-', personen, '-', canton)"/>
+            <xsl:value-of select="concat('[', @id, ']: ', name, '-', personen, '-', canton)"/>
         </li>
 	</xsl:template>
 </xsl:stylesheet>
