@@ -1,8 +1,73 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:element name="db">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="contests"/>
+                <xs:element ref="wgs"/>
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:keyref name="wgIdRef" refer="wgId">
+            <xs:selector xpath="./contests/contest/votes/vote"/>
+            <xs:field xpath="@wg"/>
+        </xs:keyref>
+
+        <xs:key name="contestId">
+            <xs:selector xpath="./contests/contest"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="wgId">
+            <xs:selector xpath="./wgs/wg"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+    </xs:element>
+
+    <xs:element name="contests">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="contest"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contest">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="name" type="contestNameType"/>
+                <xs:element name="description" type="xs:string"/>
+                <xs:element name="company" type="companyType"/>
+                <xs:element name="startDate" type="xs:date"/>
+                <xs:element name="endDate" type="xs:date"/>
+                <xs:element ref="votes"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="votes">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="vote"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vote">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:positiveInteger">
+                    <xs:attribute name="wg" type="xs:positiveInteger" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
 
     <xs:element name="wgs">
-
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="wg"/>
@@ -19,14 +84,21 @@
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" />
         </xs:complexType>
-        <xs:key name="wgId">
-            <xs:selector xpath="wg"/>
-            <xs:field xpath="@id"/>
-        </xs:key>
     </xs:element>
 
     <!-- custom DataTypes -->
 
+    <xs:simpleType name="contestNameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="companyType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="cantonType">
         <xs:restriction base="xs:string">

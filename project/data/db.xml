@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<db
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="database.xsd">
+
+    <contests>
+        <contest id="1">
+            <name>Test</name>
+            <description>Test</description>
+            <company>Test</company>
+            <startDate>2019-02-01</startDate>
+            <endDate>2019-03-01</endDate>
+            <votes>
+                <vote wg="2">3</vote>
+            </votes>
+        </contest>
+    </contests>
+
+    <wgs>
+        <wg id="1">
+            <name>Test</name>
+            <personen>3</personen>
+            <canton>Zug</canton>
+        </wg>
+        <wg id="2">
+            <name>Test2</name>
+            <personen>3</personen>
+            <canton>Zug</canton>
+        </wg>
+    </wgs>
+</db>
