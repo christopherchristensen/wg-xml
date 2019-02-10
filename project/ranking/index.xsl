@@ -9,6 +9,7 @@
                 <title></title>
             </head>
             <body>
+                <a href="/">Home</a>
                 <h2><xsl:value-of select="name" /></h2>
                 <p><xsl:value-of select="concat(startDate, ' - ', endDate)" /></p>
                 <p><xsl:value-of select="description" /></p>

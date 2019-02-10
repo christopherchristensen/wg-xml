@@ -4,6 +4,7 @@
     <xsl:template match="page">
         <html>
             <body>
+                <a href="/">Home</a>
                 <ul>
                     <xsl:apply-templates select="document(@db)/db/wgs/wg"/>
                 </ul>

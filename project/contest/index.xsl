@@ -4,16 +4,19 @@
     <xsl:template match="page">
         <html>
             <body>
-                    <xsl:apply-templates select="document(@db)/db/contests/contest"/>
+                <a href="/">Home</a>
+                <xsl:apply-templates select="document(@db)/db/contests/contest"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="contest">
+        <xsl:variable name="rankingLink" select="concat('/ranking/?contest=', @id)"/>
         <div>
             <h2><xsl:value-of select="name" /></h2>
             <p><xsl:value-of select="concat(startDate, ' - ', endDate)" /></p>
             <p><xsl:value-of select="description" /></p>
+            <a href="{$rankingLink}">Go to ranking</a>
             <hr />
         </div>
 	</xsl:template>

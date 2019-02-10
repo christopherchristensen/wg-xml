@@ -4,6 +4,7 @@
     <xsl:template match="page">
         <html>
             <body>
+                <a href="/">Home</a>
                 <form method="POST" action="create.php">
                     <div>
                         <label>Name:</label>
