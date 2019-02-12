@@ -130,7 +130,7 @@
                                 <h2>Stimmresultate</h2>
                             </header>
 
-                            TODO
+                            Please select contest
                         </article>
 
                     </div>
@@ -177,7 +177,7 @@
             <p>
                 <xsl:value-of select="description"/>
             </p>
-            <a href="{$rankingLink}">Go to ranking</a>
+            <a href="{$rankingLink}#vote">Go to ranking</a>
             <hr/>
         </div>
     </xsl:template>
