@@ -20,7 +20,7 @@ if (count($errors) == 0) {
 
 function addContest($data) {
     return dbTransaction('../data/db.xml', function ($xml) use ($data) {
-        // Get the wgs node from the db file
+        // Get the contests node from the db file
         $root = $xml->xpath('contests')[0];
 
         // Calculate the id for the new contest
@@ -29,7 +29,7 @@ function addContest($data) {
         }, $root->xpath('contest'));
         $newId = max($ids) + 1;
 
-        // Create new wg noed
+        // Create new contest noed
         $node = $root->addChild('contest');
         $node->addAttribute('id', $newId);
         $node->addChild('name', $data['name']);
