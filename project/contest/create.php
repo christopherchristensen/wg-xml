@@ -11,7 +11,7 @@ $errors = addContest([
 ]);
 
 if (count($errors) == 0) {
-    header('Location: /contest/index.xml');
+    header('Location: /index.xml#contest');
     exit();
 } else {
     print_r($errors);

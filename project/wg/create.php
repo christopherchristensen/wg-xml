@@ -9,7 +9,7 @@ $errors = addWg([
 ]);
 
 if (count($errors) == 0) {
-    header('Location: /wg/index.xml');
+    header('Location: /index.xml#wg');
     exit();
 } else {
     print_r($errors);
