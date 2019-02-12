@@ -159,9 +159,13 @@
     </xsl:template>
 
     <xsl:template match="wg">
+
+        <xsl:variable name="detailLink" select="concat('/wg/?wg=', @id)"/>
         <li>
             <xsl:value-of select="concat('[', @id, ']: ', name, '-', personen, '-', canton)"/>
         </li>
+        <a href="{$detailLink}#wg">Go to details</a>
+
     </xsl:template>
 
 
