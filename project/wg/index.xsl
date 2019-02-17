@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:variable name="bigSum" select="sum(//vote)"/>
+    <xsl:variable name="wgId" select="//wg/@id"/>
 
-    <xsl:template match="wg">
+    <xsl:template match="/">
         <html>
             <head>
                 <title>Astral by HTML5 UP</title>
@@ -39,14 +39,11 @@
                         <article id="wg" class="panel">
 
                             <header>
-                                <h1>Wohngemeinschaften</h1>
-                                <p>Details der WG:</p>
+                                <xsl:apply-templates select="//wg"/>
                             </header>
 
-                            <xsl:value-of select="name"/>
+                            <xsl:apply-templates select="//contest"/>
 
-                            TODO
-                            
                         </article>
 
                     </div>
@@ -72,5 +69,31 @@
 
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="wg">
+        <h1>
+            <xsl:value-of select="name"/>
+        </h1>
+        <p>
+            <xsl:value-of select="personen" />
+            Personen | Kanton
+            <xsl:value-of select="canton" />
+        </p>
+    </xsl:template>
+
+    <xsl:template match="contest">
+        <xsl:variable name="contestId" select="@id"/>
+        <div>
+            <h4><xsl:value-of select="name"/></h4>
+            <p><xsl:value-of select="concat(startDate, ' - ', endDate)"/></p>
+            <p><xsl:value-of select="description"/></p>
+            <form method="GET" action="/vote/">
+                <input type="hidden" name="wg" value="{$wgId}" />
+                <input type="hidden" name="contest" value="{$contestId}" />
+                <button type="submit">Für diese WG stimmen</button>
+            </form>
+            <hr/>
+        </div>
     </xsl:template>
 </xsl:stylesheet>
