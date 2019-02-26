@@ -42,7 +42,7 @@
                                 <p><xsl:value-of select="name" /></p>
                             </header>
 
-                            <p><xsl:value-of select="concat(startDate, ' - ', endDate)" /></p>
+                            <p>Laufzeit: <xsl:value-of select="concat(startDate, ' - ', endDate)" /></p>
                             <p><xsl:value-of select="description" /></p>
 
                             <table style="text-align: center;">

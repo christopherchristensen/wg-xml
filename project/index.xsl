@@ -43,22 +43,22 @@
                         <article id="wg" class="panel">
                             <header>
                                 <h1>Wohngemeinschaften</h1>
-                                <p>Neue WG erfassen</p>
+                                <p class="subtitle">Neue WG erfassen</p>
                             </header>
 
 
                             <form method="POST" action="wg/create.php">
                                 <div>
                                     <div class="col-12">
-                                        <label>Name:</label>
+                                        <label class="mt-20">Name:</label>
                                         <input type="text" name="name" required="true"/>
                                     </div>
                                     <div class="col-12">
-                                        <label>Personen:</label>
+                                        <label class="mt-20">Personen:</label>
                                         <input type="text" name="personen" required="true"/>
                                     </div>
                                     <div class="col-12">
-                                        <label>Kanton:</label>
+                                        <label class="mt-20">Kanton:</label>
                                         <input type="text" name="canton" required="true"/>
                                     </div>
                                     <div class="col-12">
@@ -68,9 +68,9 @@
                                 </div>
                             </form>
 
-                            <header>
+                            <header class="mt-100">
                                 <h1>Wohngemeinschaften</h1>
-                                <p>Bereits erfasste WGs:</p>
+                                <p class="subtitle">Bereits erfasste WGs:</p>
                             </header>
 
 
@@ -82,7 +82,7 @@
                         <article id="contest" class="panel">
                             <header>
                                 <h1>Wettbewerbe</h1>
-                                <p>Neuer Wettbewerb erfassen</p>
+                                <p class="subtitle">Neuer Wettbewerb erfassen</p>
                             </header>
 
 
@@ -90,23 +90,23 @@
 
                                 <div>
                                     <div class="col-12">
-                                        <label>Name:</label>
+                                        <label class="mt-20">Name:</label>
                                         <input type="text" name="name" required="true"/>
                                     </div>
                                     <div class="col-12">
-                                        <label>Beschreibung:</label>
+                                        <label class="mt-20">Beschreibung:</label>
                                         <textarea rows="5" name="description" required="true"/>
                                     </div>
                                     <div class="col-12">
-                                        <label>Firma:</label>
+                                        <label class="mt-20">Firma:</label>
                                         <input type="text" name="company" required="true"/>
                                     </div>
                                     <div class="col-12">
-                                        <label>Startdatum:</label>
+                                        <label class="mt-20">Startdatum:</label>
                                         <input type="date" name="startDate" required="true"/>
                                     </div>
                                     <div class="col-12">
-                                        <label>Enddatum:</label>
+                                        <label class="mt-20">Enddatum:</label>
                                         <input type="date" name="endDate" required="true"/>
                                     </div>
                                     <div class="col-12">
@@ -116,9 +116,9 @@
                                 </div>
                             </form>
 
-                            <header>
+                            <header class="mt-100">
                                 <h1>Wettbewerbe</h1>
-                                <p>Bereits erfasste Wettbewerbe:</p>
+                                <p class="subtitle">Bereits erfasste Wettbewerbe:</p>
                             </header>
 
                             <xsl:apply-templates select="document(@db)/db/contests/contest"/>
@@ -131,6 +131,8 @@
                             </header>
 
                             Please select contest
+
+                            <xsl:apply-templates select="document(@db)/db/contests/contest"/>
                         </article>
 
                     </div>
@@ -161,9 +163,11 @@
     <xsl:template match="wg">
 
         <xsl:variable name="detailLink" select="concat('/wg/?wg=', @id)"/>
-        <li>
+        <li class="wg">
             <a href="{$detailLink}#wg" style="color:#363636;text-decoration:none">
-                <xsl:value-of select="concat(name, ' [', canton, ']')"/>
+                <h2><xsl:value-of select="name"/></h2>
+                <p class="mt-20">Kanton: <xsl:value-of select="canton"/></p>
+                <p>Anzahl Personen: <xsl:value-of select="personen"/></p>
             </a>
         </li>
 
@@ -172,7 +176,24 @@
 
     <xsl:template match="contest">
         <xsl:variable name="rankingLink" select="concat('/ranking/?contest=', @id)"/>
-        <div>
+        <div class="contest">
+            <h2>
+                <xsl:value-of select="name"/>
+            </h2>
+            <p>
+                <xsl:value-of select="concat(startDate, ' - ', endDate)"/>
+            </p>
+            <p>
+                <xsl:value-of select="description"/>
+            </p>
+            <a href="{$rankingLink}#vote">Go to ranking</a>
+            <hr/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="contest">
+        <xsl:variable name="rankingLink" select="concat('/ranking/?contest=', @id)"/>
+        <div class="contest">
             <h2>
                 <xsl:value-of select="name"/>
             </h2>

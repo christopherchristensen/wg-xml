@@ -87,8 +87,8 @@
 
         <div>
             <h4><xsl:value-of select="name"/></h4>
-            <p><xsl:value-of select="concat(startDate, ' - ', endDate)"/></p>
-            <p><xsl:value-of select="description"/></p>
+            <p>Laufzeit: <xsl:value-of select="concat(startDate, ' - ', endDate)"/></p>
+            <p>Beschreib: <xsl:value-of select="description"/></p>
 
             <xsl:call-template name="voteQrCode">
                 <xsl:with-param name="wg" select="$wgId" />
@@ -98,7 +98,7 @@
             <form method="GET" action="/vote/">
                 <input type="hidden" name="wg" value="{$wgId}" />
                 <input type="hidden" name="contest" value="{$contestId}" />
-                <button type="submit">Für diese WG stimmen</button>
+                <button class="btn-vote mt-20" type="submit">Für diese WG stimmen</button>
             </form>
             <hr/>
         </div>
@@ -110,6 +110,6 @@
 
         <xsl:variable name="qrSrc" select="concat('https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=http%3A%2F%2Fdemo.org%2Fshow%3Fcontest%3D', $contest, '%26wg%3D', $wg)" />
 
-        <img src="{$qrSrc}" />
+        <img class="mt-20" src="{$qrSrc}" />
     </xsl:template>
 </xsl:stylesheet>
