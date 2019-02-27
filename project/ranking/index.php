@@ -19,5 +19,5 @@ $result = $xml->xpath('//contest[@id = ' . $contestId . ']')[0];
 
 ?>
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="success.xsl"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <?= $result->asXML() ?>
