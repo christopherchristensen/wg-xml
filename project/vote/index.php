@@ -34,7 +34,12 @@ $errors = dbTransaction('../data/db.xml', function ($xml) use ($data) {
 });
 
 if (count($errors) == 0) {
-    echo 'Your vote has been saved';
+    $xml = simplexml_load_file('success.xsl');
 } else {
-    echo 'Uups, something went wrong';
+    $xml = simplexml_load_file('error.xsl');
 }
+
+
+
+?>
+<?= $xml->asXML(); ?>

@@ -16,7 +16,7 @@ if (!$valid) {
 
 $dbStr = vsprintf('%s%s<db>%s%s</db>', [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<?xml-stylesheet type="text/xsl" href="index.xsl"?>',
+    '<?xml-stylesheet type="text/xsl" href="success.xsl"?>',
     $xml->xpath('//wg[@id = ' . $wgId . ']')[0]->asXML(),
     $xml->xpath('//contests')[0]->asXML()
 ]);

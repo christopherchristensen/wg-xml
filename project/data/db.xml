@@ -9,7 +9,7 @@
             <endDate>2019-03-01</endDate>
             <votes>
                 <vote wg="2">3</vote>
-                <vote wg="1">18</vote>
+                <vote wg="1">51</vote>
             </votes>
         </contest>
         <contest id="2">
@@ -20,7 +20,7 @@
             <endDate>2019-02-01</endDate>
             <votes>
                 <vote wg="2">4</vote>
-                <vote wg="1">1</vote>
+                <vote wg="1">6</vote>
             </votes>
         </contest>
     </contests>
