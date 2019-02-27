@@ -162,7 +162,7 @@
 
     <xsl:template match="wg">
 
-        <xsl:variable name="detailLink" select="concat('/wg/?wg=', @id)"/>
+        <xsl:variable name="detailLink" select="concat('wg/?wg=', @id)"/>
         <li class="wg">
             <a href="{$detailLink}#wg" style="color:#363636;text-decoration:none">
                 <h2><xsl:value-of select="name"/></h2>
@@ -175,24 +175,7 @@
 
 
     <xsl:template match="contest">
-        <xsl:variable name="rankingLink" select="concat('/ranking/?contest=', @id)"/>
-        <div class="contest">
-            <h2>
-                <xsl:value-of select="name"/>
-            </h2>
-            <p>
-                <xsl:value-of select="concat(startDate, ' - ', endDate)"/>
-            </p>
-            <p>
-                <xsl:value-of select="description"/>
-            </p>
-            <a href="{$rankingLink}#vote">Go to ranking</a>
-            <hr/>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="contest">
-        <xsl:variable name="rankingLink" select="concat('/ranking/?contest=', @id)"/>
+        <xsl:variable name="rankingLink" select="concat('ranking/?contest=', @id)"/>
         <div class="contest">
             <h2>
                 <xsl:value-of select="name"/>

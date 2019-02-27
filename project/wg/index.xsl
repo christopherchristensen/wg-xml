@@ -95,7 +95,7 @@
                 <xsl:with-param name="contest" select="$contestId" />
             </xsl:call-template>
 
-            <form method="GET" action="/vote/">
+            <form method="GET" action="../vote/">
                 <input type="hidden" name="wg" value="{$wgId}" />
                 <input type="hidden" name="contest" value="{$contestId}" />
                 <button class="btn-vote mt-20" type="submit">Für diese WG stimmen</button>
