@@ -6,7 +6,7 @@
             <description>Karton wird in der Schweiz aus Faulheit oft in den normalen Abfall gelegt. Dies soll ein Ende haben. Wir fordern all WGs auf Karton von lokalen Haushalten ein zu sammeln und in die nächstgelegene Entsorgungsstelle zu bringen. Erzählt den Menschen was und wieso ihr dies tut und als Gegenleistung bekommt ihr eine Stimme. Die WG mit den meisten Stimmen erhält einen IKEA Gutschein im Wert von 2500.-! Viel Spass :)</description>
             <company>Ikea</company>
             <startDate>2019-01-01</startDate>
-            <endDate>2019-06-31</endDate>
+            <endDate>2019-06-30</endDate>
             <votes>
                 <vote wg="2">3</vote>
                 <vote wg="1">6</vote>
@@ -36,7 +36,7 @@
             <personen>3</personen>
             <canton>Zug</canton>
         </wg>
-        <wg id="2">
+        <wg id="3">
             <name>Trämles</name>
             <personen>2</personen>
             <canton>Bern</canton>
