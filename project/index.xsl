@@ -186,7 +186,9 @@
             <p>
                 <xsl:value-of select="description"/>
             </p>
-            <a href="{$rankingLink}#vote">Go to ranking</a>
+            <form action="{$rankingLink}#vote">
+                <button class="btn-vote mt-20" type="submit">Go to ranking</button>
+            </form>
             <hr/>
         </div>
     </xsl:template>
