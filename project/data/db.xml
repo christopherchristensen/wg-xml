@@ -2,22 +2,22 @@
 <db xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="db.xsd">
     <contests>
         <contest id="1">
-            <name>Contest 1</name>
-            <description>Description for Contest 1</description>
-            <company>Company 1</company>
-            <startDate>2019-02-01</startDate>
-            <endDate>2019-03-01</endDate>
+            <name>Möbel dank Karton</name>
+            <description>Karton wird in der Schweiz aus Faulheit oft in den normalen Abfall gelegt. Dies soll ein Ende haben. Wir fordern all WGs auf Karton von lokalen Haushalten ein zu sammeln und in die nächstgelegene Entsorgungsstelle zu bringen. Erzählt den Menschen was und wieso ihr dies tut und als Gegenleistung bekommt ihr eine Stimme. Die WG mit den meisten Stimmen erhält einen IKEA Gutschein im Wert von 2500.-! Viel Spass :)</description>
+            <company>Ikea</company>
+            <startDate>2019-01-01</startDate>
+            <endDate>2019-06-31</endDate>
             <votes>
                 <vote wg="2">3</vote>
-                <vote wg="1">51</vote>
+                <vote wg="1">6</vote>
             </votes>
         </contest>
         <contest id="2">
-            <name>Contest 2</name>
-            <description>Description for Contest 2</description>
-            <company>Company 2</company>
-            <startDate>2019-01-01</startDate>
-            <endDate>2019-02-01</endDate>
+            <name>Putztausch</name>
+            <description>Du hast keine Lust mer die Wohnung zu putzen? Deine Mitbewohner machen den Dreck und putzen nichts? Es gibt Konflikte wegen den Ämtchen? Wir haben die Lösung! Helft älteren Leuten den Einkauf zu machen und sammelt dafür Stimmen. Die WG mit den meisten Stimmen bei Wettbewerbsschluss erhält einen Gutschein für eine komplette Wohnungsreinigung!</description>
+            <company>Mr. Cleaner</company>
+            <startDate>2019-02-01</startDate>
+            <endDate>2019-04-01</endDate>
             <votes>
                 <vote wg="2">4</vote>
                 <vote wg="1">7</vote>
@@ -27,14 +27,19 @@
 
     <wgs>
         <wg id="1">
-            <name>Test</name>
+            <name>Ghettohausen</name>
+            <personen>5</personen>
+            <canton>Zürich</canton>
+        </wg>
+        <wg id="2">
+            <name>Ums Egg</name>
             <personen>3</personen>
             <canton>Zug</canton>
         </wg>
         <wg id="2">
-            <name>Test2</name>
-            <personen>3</personen>
-            <canton>Zug</canton>
+            <name>Trämles</name>
+            <personen>2</personen>
+            <canton>Bern</canton>
         </wg>
     </wgs>
 </db>
