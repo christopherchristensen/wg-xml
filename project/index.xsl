@@ -130,7 +130,7 @@
                                 <h2>Stimmresultate</h2>
                             </header>
 
-                            Please select contest
+                            Wählen Sie den gewünschten Wettbewerb
 
                             <xsl:apply-templates select="document(@db)/db/contests/contest"/>
                         </article>
@@ -187,7 +187,7 @@
                 <xsl:value-of select="description"/>
             </p>
             <form action="{$rankingLink}#vote">
-                <button class="btn-vote mt-20" type="submit">Go to ranking</button>
+                <button class="btn-vote mt-20" type="submit">Zur Auswertung</button>
             </form>
             <hr/>
         </div>
