@@ -175,7 +175,8 @@
 
 
     <xsl:template match="contest">
-        <xsl:variable name="rankingLink" select="concat('ranking/?contest=', @id)"/>
+        <xsl:variable name="contestId" select="@id"/>
+
         <div class="contest">
             <h2>
                 <xsl:value-of select="name"/>
@@ -186,7 +187,8 @@
             <p>
                 <xsl:value-of select="description"/>
             </p>
-            <form action="{$rankingLink}#vote">
+            <form action="ranking/">
+                <input type="hidden" name="contest" value="{$contestId}" />
                 <button class="btn-vote mt-20" type="submit">Zur Auswertung</button>
             </form>
             <hr/>
