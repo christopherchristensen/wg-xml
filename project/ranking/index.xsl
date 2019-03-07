@@ -2,6 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:variable name="bigSum" select="sum(//vote)"/>
+    <xsl:variable name="contestId" select="//contest/@id"/>
 
     <xsl:template match="contest">
         <html>
@@ -85,6 +86,8 @@
 	</xsl:template>
 
     <xsl:template match="vote">
+        <xsl:variable name="wgId" select="@wg"/>
+
         <tr>
             <th><xsl:value-of select="@wg" /></th>
             <td>
@@ -96,6 +99,13 @@
                     <rect x="0" y="0" height="10" width="200" style="fill:gray;"/>
                     <rect x="0" y="0" height="10" width="{$val div $bigSum * 200}" style="fill:green;"/>
                 </svg>
+            </td>
+            <td>
+                <form method="GET" action="../vote/">
+                    <input type="hidden" name="wg" value="{$wgId}" />
+                    <input type="hidden" name="contest" value="{$contestId}" />
+                    <button class="btn-vote mt-20" type="submit">Für diese WG stimmen</button>
+                </form>
             </td>
         </tr>
     </xsl:template>
