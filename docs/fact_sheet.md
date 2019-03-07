@@ -65,8 +65,7 @@ Als Datenbank dient die Datei `db.xml`, welche von den
 Processing-Instructions geladen wird. Das grundlegende Layout wurde mit
 Hilfe eines HTML-Templates (www.html5up.net) erstellt. In der Datei
 `index.xsl` ist ein XSLT definiert, dass dann gemäss Route und XPath
-mittels `apply-templates` die korrkete XML-Ausgabe generiert. Um die neue
-Stimmen abzuspeichern wird PHP verwendet.
+mittels `apply-templates` die korrkete XML-Ausgabe generiert. Für alle Schreibzugriffe auf die Datenbank wird PHP verwendet.
 
 ## Frontend
 
