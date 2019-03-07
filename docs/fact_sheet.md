@@ -105,6 +105,8 @@ Die Applikation soll über die folgenden Features verfügen:
    * Übersicht Ranking
 
 # Architektur
-
+Die Architektur des Projekts ist wie folgt aufgebaut.
 ![Architektur der Applikation](./img/architektur.png)
 
+# Fazit
+Nach besuchen der Blockwoche und erfolgreich umgesetzten Projektes, sind wir über die Fähigkeiten von XML begeistert. Im vergleich zu JSON war XML in unseren Köpfen die alte, schwergewichtige Alternative. Nun haben wir den eigentlichen Einsatzzweck davon gelernt und praktisch anwenden können. Die Anforderungen an das Projekt und dessen Umfang war für uns nicht sehr klar definiert. Was aber schlussendlich den Vorteile hatte, dass wir eine für uns Interessante Aufgabenstellung selber definieren konnten. Das Projekt hat aus unserer Sicht Spass gemacht und wir konnten dabei viel lernen. Im Team konnten wir uns gegenseitig unterstützen und das gelernte gemeinsam festigen.
