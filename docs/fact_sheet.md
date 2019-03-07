@@ -21,7 +21,7 @@ Das Ziel ist eine grösstenteils auf XML basierte Web-Applikation zu entwickeln.
 * Wohngemeinschaften erhalten einen eigenen Link, den sie mit Freunden (Wählern) teilen können
 * Über diesen Link können die Freunde (Wähler) alle aktuellen Wettbewerbe sehen und Stimmen für diese Wohngemeinschaft für die einzelnen Wettbewerbe abgeben 
 
-![Picture1](/Users/christopher/Desktop/Picture1.png)
+![Picture1](./img/Picture1.png)
 
 
 
