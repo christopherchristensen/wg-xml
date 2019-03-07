@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:variable name="bigSum" select="sum(//vote)"/>
-
     <xsl:template match="contest">
+        <xsl:variable name="contestId" select="@id"/>
+
         <html>
             <head>
                 <title>Astral by HTML5 UP</title>
@@ -38,6 +38,11 @@
                         <!-- Vote -->
                         <article id="vote" class="panel">
                             <p>Upps, etwas ist schief gelaufen</p>
+
+                            <form action="../ranking/">
+                                <input type="hidden" name="contest" value="{$contestId}" />
+                                <button class="btn-vote mt-20" type="submit">Zur Auswertung</button>
+                            </form>
                         </article>
 
                     </div>

@@ -33,13 +33,10 @@ $errors = dbTransaction('../data/db.xml', function ($xml) use ($data) {
     }
 });
 
-if (count($errors) == 0) {
-    $xml = simplexml_load_file('success.xsl');
-} else {
-    $xml = simplexml_load_file('error.xsl');
-}
-
-
+$state = (count($errors) == 0) ? 'success' : 'error';
+header('Content-type: application/xml');
 
 ?>
-<?= $xml->asXML(); ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="<?= $state ?>.xsl"?>
+<contest id="<?= $data['contestId'] ?>"></contest>
