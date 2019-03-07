@@ -12,7 +12,7 @@ Web-Applikation zu entwickeln. Zweck dieser Applikation soll es sein
 Wettbewerbe auszuschreiben, an denen Wohngemeinschaften Preise gewinnen
 können. Die Gewinner eines Wettbewerbe werden mittels eines öffentichen
 Voting-Systems bestimmt. Die Wettbewerbe werden primär  von Unternehmen
-ausgeschrieben und dienen somit hauptsächlich als Werbung. Dieses Form des
+ausgeschrieben und dienen somit hauptsächlich als Werbung. Diese Form des
 Marketing nennen wir "Crowdsourced Contest Marketing".
 
 # Das Prinzip
