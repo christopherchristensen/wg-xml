@@ -27,7 +27,7 @@
                         <a href="../index.xml#contest" class="icon fa-trophy">
                             <span>Contest</span>
                         </a>
-                        <a href="#vote" class="icon fa-list">
+                        <a href="../index.xml#vote" class="icon fa-list">
                             <span>Stimmresultate</span>
                         </a>
                     </nav>
