@@ -110,7 +110,14 @@ Die Architektur des Projekts ist wie folgt aufgebaut.
 
 ![Architektur der Applikation](./img/architektur.png)
 
+# Stolpersteine
+
+Unsere ursprüngliche Idee, die zu speichernde Daten abzulegen, war jeweils die Daten der Wohngemeinschaften und die der Wettbewerbe getrennt in zwei Dokumenten abzulegen. Dies erwies sich schwieriger als gedacht. Wir brachten es nämlich nicht hin Foreign Keys aus anderen Dokumenten zu referenzieren. Unsere Lösung war also alles in einem Dokument abzulegen.
+
+
+
 # Fazit
+
 Nach dem Besuch der Blockwoche sind wird von den Fähigkeiten und
 Möglichkeiten von XML überrascht. Im Vergleich zu JSON war XML in unseren
 Köpfen immer die alte, schwergewichtige Alternative. Nun haben wir einige
