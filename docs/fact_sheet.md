@@ -65,8 +65,8 @@ Als Datenbank dient die Datei `db.xml`, welche von den
 Processing-Instructions geladen wird. Das grundlegende Layout wurde mit
 Hilfe eines HTML-Templates (www.html5up.net) erstellt. In der Datei
 `index.xsl` ist ein XSLT definiert, dass dann gemäss Route und XPath
-mittels `apply-templates` die korrkete XML-Ausgabe generiert. Um die neue
-Stimmen abzuspeichern wird PHP verwendet.
+mittels `apply-templates` die korrkete XML-Ausgabe generiert. Für alle
+Schreibzugriffe auf die Datenbank wird PHP verwendet.
 
 ## Frontend
 
@@ -106,9 +106,22 @@ Die Applikation soll über die folgenden Features verfügen:
 
 # Architektur
 
+Die Architektur des Projekts ist wie folgt aufgebaut.
+
 ![Architektur der Applikation](./img/architektur.png)
 
-# Links
+# Fazit
+Nach dem Besuch der Blockwoche sind wird von den Fähigkeiten und
+Möglichkeiten von XML überrascht. Im Vergleich zu JSON war XML in unseren
+Köpfen immer die alte, schwergewichtige Alternative. Nun haben wir einige
+Anwendungsgebiete davon gelernt und praktisch anwenden können.
+
+Die Anforderungen an das Projekt und dessen Umfang war für uns nicht sehr klar
+definiert. Dies ermöglichte es uns jedoch eine für uns interessante
+Aufgabenstellung selber zu definieren. Das Projekt hat aus unserer Sicht
+Spass gemacht und wir konnten dabei das Gelernte der Blockwoche in der
+Praxis umsetzten.
 
 * [http://xml.enterpriselab.ch/team02](http://xml.enterpriselab.ch/team02)
 * [https://gitlab.enterpriselab.ch/xml-hs18/team02](https://gitlab.enterpriselab.ch/xml-hs18/team02)
+
