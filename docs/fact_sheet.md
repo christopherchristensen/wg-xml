@@ -108,3 +108,7 @@ Die Applikation soll über die folgenden Features verfügen:
 
 ![Architektur der Applikation](./img/architektur.png)
 
+# Links
+
+* [http://xml.enterpriselab.ch/team02](http://xml.enterpriselab.ch/team02)
+* [https://gitlab.enterpriselab.ch/xml-hs18/team02](https://gitlab.enterpriselab.ch/xml-hs18/team02)
