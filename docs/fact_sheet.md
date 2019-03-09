@@ -112,9 +112,11 @@ Die Architektur des Projekts ist wie folgt aufgebaut.
 
 # Stolpersteine
 
-Unsere ursprüngliche Idee, die zu speichernde Daten abzulegen, war jeweils die Daten der Wohngemeinschaften und die der Wettbewerbe getrennt in zwei Dokumenten abzulegen. Dies erwies sich schwieriger als gedacht. Wir brachten es nämlich nicht hin Foreign Keys aus anderen Dokumenten zu referenzieren. Unsere Lösung war also alles in einem Dokument abzulegen.
-
-
+Unsere ursprüngliche Idee, die zu speichernde Daten abzulegen, war jeweils
+die Daten der Wohngemeinschaften und die der Wettbewerbe getrennt in zwei
+Dokumenten abzulegen. Dies erwies sich schwieriger als gedacht. Wir brachten
+es nämlich nicht hin Foreign Keys aus anderen Dokumenten zu referenzieren.
+Unsere Lösung war also alles in einem Dokument abzulegen.
 
 # Fazit
 
